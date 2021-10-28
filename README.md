@@ -6,11 +6,13 @@
    
    Solucion: Se creo una clase abstracta padre llamada Postre, para poder reutilizar el codigo y tener una mejor jerarquia.
    
+   
 2. Principios que se rompen: SINGLE RESPONSABILITY PRINCIPLE, OPEN-CLOSED PRINCIPLE
    
    Motivos: La clase OperacionesAderezo tienen metodos que se repiten. Ademas, los metodos de OperacionesAderezo eran dependientes de las clases Helado y Pastel.
    
    Solucion: Se elimino OperacionesAderezo y en la clase padre Postre se agregaron los metodos de anadir y quitar aderezo. De esa manera, el programa no tendra duplicacion de  codigo y estara mejor encapsulado.
+   
 
 3. Principios que se rompen : Single Responsibility Principle
    
@@ -24,3 +26,10 @@
    Motivos : La clase postre necesitaban un objeto concreto (Enum Aderezo) y necesitan depende una clase abstracta.
    
    Solucion: Crear una clase Aderezo y una subclase individual para cada aderezo existente.
+   
+   
+5. Principios que se rompen: Interface Segregation Principle
+      
+      Motivos: La clase LecheDeslactosada implementaba el método usarPastel(), el cual no debería ser capaz de usar.
+      
+      Solucion: En la clase LecheEntera se le asignó un valor por defecto al método usarPastel().
