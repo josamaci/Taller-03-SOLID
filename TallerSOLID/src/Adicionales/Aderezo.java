@@ -2,10 +2,19 @@ package Adicionales;
 
 public abstract class Aderezo {
 
-    private String nombre;
+    protected String nombre;
 
     // MALVAVISCOS,FRUTILLA,CREMA
 
-    public abstract void setNombre(String nombre);
+    public abstract void setNombre();
+
+    public Aderezo() {
+        this.setNombre();
+    }
+
+    @Override
+    public String toString() {
+        return nombre.toUpperCase();
+    }
 
 }

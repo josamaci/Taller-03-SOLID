@@ -7,7 +7,7 @@ public abstract class Postre {
 
     protected String sabor;
     protected double precioParcial;
-    protected ArrayList<Aderezo> aderezos;
+    protected ArrayList<Aderezo> aderezos = new ArrayList<>();
 
     public ArrayList<Aderezo> getAderezos() {
         return aderezos;
@@ -21,11 +21,11 @@ public abstract class Postre {
         return precioParcial;
     }
 
-    public static void anadirAderezo(Postre postre, Aderezo aderezo) {
+    public static void addAderezo(Postre postre, Aderezo aderezo) {
         postre.getAderezos().add(aderezo);
     }
 
-    public static void quitarAderezo(Postre postre, Aderezo aderezo) {
+    public static void rmAderezo(Postre postre, Aderezo aderezo) {
         postre.getAderezos().remove(aderezo);
     }
 }
