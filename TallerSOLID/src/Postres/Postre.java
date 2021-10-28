@@ -21,11 +21,11 @@ public abstract class Postre {
         return precioParcial;
     }
 
-    public static void addAderezo(Postre postre, Aderezo aderezo) {
-        postre.getAderezos().add(aderezo);
+    public void addAderezos(Aderezo aderezo) {
+        this.getAderezos().add(aderezo);
     }
 
-    public static void rmAderezo(Postre postre, Aderezo aderezo) {
-        postre.getAderezos().remove(aderezo);
+    public void rmAderezos(Aderezo aderezo) {
+        this.getAderezos().remove(aderezo);
     }
 }

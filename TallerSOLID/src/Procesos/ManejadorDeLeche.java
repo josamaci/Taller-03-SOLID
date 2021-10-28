@@ -1,17 +1,21 @@
 package Procesos;
 
-import Leche.LecheDeslactosada;
-import Leche.LecheDescremada;
-import Leche.LecheEntera;
+import Leche.*;
 import Postres.*;
 
 public class ManejadorDeLeche {
     
-    public void cambiarTipoLeche(LecheEntera leche, Object postre){
+    private LecheEntera leche;
+
+    public ManejadorDeLeche(LecheEntera leche) {
+        this.leche = leche;
+    }
+    
+    public void cambiarTipoLeche(Postre postre){
         // Cambiar tipo de leche en la preparación de los postres, usar leche deslactosada
-        System.out.println(postre.getClass());
-        System.out.println(Pastel.class);
-        if(postre.getClass() == Pastel.class && leche instanceof LecheDescremada){
+//        System.out.println(postre.getClass());
+//        System.out.println(Pastel.class);
+        if(postre.getClass() == Pastel.class){
             leche.usarPastel();
         }else{
             leche.usarHelado();
